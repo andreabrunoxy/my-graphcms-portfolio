@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useTheme } from 'next-themes';
+import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
 
 const Header = () => {
   const router = useRouter();
@@ -9,32 +9,32 @@ const Header = () => {
 
   const navLinks = [
     {
-      name: 'Home',
-      href: '/'
+      name: "Home",
+      href: "/"
     },
     {
-      name: 'About',
-      href: '/about'
+      name: "About",
+      href: "/about"
     },
     {
-      name: 'Portfolio',
-      href: '/portfolio'
+      name: "Portfolio",
+      href: "/portfolio"
     },
     {
-      name: 'Blog',
-      href: '/blog'
+      name: "Blog",
+      href: "/blog"
     },
     {
-      name: 'Gallery',
-      href: '/gallery'
+      name: "Gallery",
+      href: "/gallery"
     },
     {
-      name: 'Contacts',
-      href: '/contacts'
+      name: "Contacts",
+      href: "/contacts"
     }
   ];
   return (
-    <div className="w-full p-6 dark:text-gray-100 dark:bg-gray-800">
+    <div className="w-full p-6 dark:text-gray-100 dark:bg-gray-800 ">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto">
         <div className="text-4xl font-bold text-gray-900 dark:text-gray-100">
           <span className="text-blue-900 dark:text-blue-500">My</span> Portfolio
@@ -46,8 +46,8 @@ const Header = () => {
                 <a
                   className={`hover:text-blue-600 transition-colors duration-300 ${
                     router.pathname === link.href
-                      ? 'text-blue-900 dark:text-blue-500 font-semibold'
-                      : ''
+                      ? "text-blue-900 dark:text-blue-500 font-semibold"
+                      : ""
                   } `}
                 >
                   {link.name}
@@ -60,9 +60,9 @@ const Header = () => {
           aria-label="Toggle Dark Mode"
           type="button"
           className="h-12 w-24 order-2 md:order-3 text-3xl"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
-          {`${theme === 'dark' ? '☀' : '🌙'}`}
+          {`${theme === "dark" ? "☀" : "🌙"}`}
         </button>
       </div>
     </div>
